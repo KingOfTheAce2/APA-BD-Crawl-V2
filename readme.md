@@ -78,6 +78,18 @@ crawler.save_results("my_results.json")
 crawler.download_pdfs("my_pdfs")
 ```
 
+### APA Title Crawler
+
+To crawl only the list of APA titles without downloading PDFs:
+
+```bash
+python apa_title_crawler.py
+```
+
+This generates `apa_titles.json` containing all titles found on the site. The
+workflow in `.github/workflows/crawl_titles.yml` can be triggered manually to
+produce this file as a build artifact.
+
 ## Output
 
 ### JSON Results
