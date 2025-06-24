@@ -73,6 +73,9 @@ Thumbs.db
 # Project specific
 *.log
 apa_documents.json
+apa_titles.json
+apa_titles.csv
+apa_titles.txt
 pdfs/
 downloads/
 results/
