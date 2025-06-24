@@ -20,4 +20,7 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: apa-titles
-          path: apa_titles.json
+          path: |
+            apa_titles.json
+            apa_titles.csv
+            apa_titles.txt

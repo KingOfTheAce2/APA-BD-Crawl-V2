@@ -6,6 +6,7 @@ from bs4 import BeautifulSoup
 import re
 import time
 import json
+import csv
 from urllib.parse import urljoin
 from typing import Set, List
 import logging
@@ -82,6 +83,20 @@ def main() -> None:
     with open("apa_titles.json", "w", encoding="utf-8") as f:
         json.dump({"titles": titles}, f, indent=2, ensure_ascii=False)
     print("Saved titles to apa_titles.json")
+
+    # Also write titles to CSV for easier editing in Excel
+    with open("apa_titles.csv", "w", newline="", encoding="utf-8") as f:
+        writer = csv.writer(f)
+        writer.writerow(["title"])
+        for t in titles:
+            writer.writerow([t])
+    print("Saved titles to apa_titles.csv")
+
+    # Write plain text file with one title per line
+    with open("apa_titles.txt", "w", encoding="utf-8") as f:
+        for t in titles:
+            f.write(t + "\n")
+    print("Saved titles to apa_titles.txt")
 
 
 if __name__ == "__main__":

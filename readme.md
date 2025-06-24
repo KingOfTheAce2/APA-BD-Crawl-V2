@@ -86,9 +86,10 @@ To crawl only the list of APA titles without downloading PDFs:
 python apa_title_crawler.py
 ```
 
-This generates `apa_titles.json` containing all titles found on the site. The
-workflow in `.github/workflows/crawl_titles.yml` can be triggered manually to
-produce this file as a build artifact.
+This generates `apa_titles.json`, `apa_titles.csv`, and `apa_titles.txt`
+containing all titles found on the site. The workflow in
+`.github/workflows/crawl_titles.yml` can be triggered manually to produce these
+files as build artifacts.
 
 ## Output
 
